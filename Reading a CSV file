@@ -1,0 +1,13 @@
+import csv
+
+def read_csv(filename):
+    with open(filename, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        data = [row for row in reader]
+    return data
+
+# Пример использования
+filename = 'data.csv'
+csv_data = read_csv(filename)
+for row in csv_data:
+    print(row)
